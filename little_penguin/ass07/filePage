@@ -1,0 +1,135 @@
+#include <linux/miscdevice.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/init.h>
+#include <linux/fs.h>
+#include <linux/debugfs.h>
+#include <linux/uaccess.h>
+#include <linux/string.h>
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("rburger");
+MODULE_DESCRIPTION("Debugfs Module");
+
+//FUNCTION PROTOTYPES AND INSTRUCTIONS
+/*
+   struct dentry	*debugfs_create_dir(const char *name, struct dentry *parent); //create directory called name in (if parent NULL) root directory of debugfs
+   struct dentry	*debugfs_create_file(const char *name, mode_t mode, struct dentry *parent, void *data, const struct file_operations *fops);
+// name -> name of file, mode -> access permissions, parent -> directory stored in, fops -> operations for file's behaviour (at least read() and/or write().
+// ret value -> dentry pointer to created file
+
+void	debugfs_remove(struct dentry *filename);
+// removes file created in debugfs
+
+void	debugfs_remove_recursive(struct dentry *dentry);
+//dentry -> dir name - will remove all files in dir and dir.
+*/
+////////////////////// MY CODE STARTS HERE! ///////////
+
+#define		PAGE 4096
+static char	message[PAGE] = {0};
+static short	size_of_msg;
+static char	uname[8] = "rburger\n";
+
+struct dentry *my_dir; //use this as pointer to create files in the directory (and to clean up at the end) 
+struct dentry *my_jiffies;
+struct dentry *my_foo;
+struct dentry *my_id;
+
+static ssize_t	id_read(struct file *filep, char *buffer, size_t len, loff_t *offset);
+static ssize_t	id_write(struct file *filep, const char *buffer, size_t len, loff_t *offset);
+
+static ssize_t	foo_read(struct file *filep, char *buffer, size_t len, loff_t *offset);
+static ssize_t	foo_write(struct file *filep, const char *buffer, size_t len, loff_t *offset);
+
+static ssize_t	jiff_read(struct file *filep, char *buffer, size_t len, loff_t *offset);
+static ssize_t	jiff_write(struct file *filep, const char *buffer, size_t len, loff_t *offset);
+
+static struct file_operations fops_id =
+{
+	.read = id_read,
+	.write = id_write
+};
+
+static ssize_t	id_read(struct file *filep, char *buffer, size_t len, loff_t *offset)
+{
+	int count = 0;
+
+	count = simple_read_from_buffer(buffer, 8, offset, uname, 8);
+
+	if (count < 0) {
+		printk(KERN_INFO "RED: Invalid input. count: %d\n", count);
+		return -EINVAL;
+	} else {
+		printk(KERN_INFO "RED: read successful. count: %d\n", count);
+		return (count);
+	}
+}
+
+static ssize_t	id_write(struct file *filep, const char *buffer, size_t len, loff_t *offset)
+{
+	if (buffer == NULL) {
+		printk(KERN_INFO "RED: NULL buffer\n");
+		return (-EINVAL);
+	} else if (len < 0) {
+		printk(KERN_INFO "RED: incorrect length\n");
+		return -EINVAL;
+	} else {
+		int count = 0;
+
+		count = simple_write_to_buffer(message, 8, offset, buffer, len);
+
+		if (strcmp(message, uname) == 0 || strcmp(message, "rburger") == 0) {
+			printk(KERN_INFO "RED: username matched. Message sent: %s\n", message);
+			return count;
+		} else {
+			printk(KERN_INFO "RED: username doesn't match\n");
+			return -EINVAL;
+		}
+	}
+}
+
+static struct file_operations fops_foo =
+{
+	.read = foo_read,
+	.write = foo_write
+};
+
+static ssize_t	foo_read(struct file *filep, char *buffer, size_t len, loff_t *offset)
+{
+	int count = 0;
+	count = simple_read_from_buffer(buffer, PAGE, offset, message, 5);
+
+	if (count < 0) {
+		printk(KERN_INFO "RED: Invalid input\n");
+		return (-EINVAL);
+	} else {
+		printk(KERN_INFO "RED: to print time\n");
+		return (count);
+	}
+}
+
+static ssize_t	foo_write(struct file *filep, const char *buffer, size_t len, loff_t *offset)
+{
+	if (buffer == NULL) {
+		printk(KERN_INFO "RED: NULL buffer\n");
+		return -EINVAL;
+	} else if (len < 0) {
+		printk(KERN_INFO "RED: incorrect length\n");
+		return -EINVAL;
+	} else {
+		int count = 0;
+
+		count = simple_write_to_buffer(message, 5, offset, buffer, len);
+
+		if (strcmp(message, "time") == 0 || strcmp(message, "time\n") == 0) { 
+			printk(KERN_INFO "RED: found time in message. Message sent: %s\n", message);
+			return (count);
+		} else {
+			printk(KERN_INFO "RED: time doesn't match. Message: %s\n", message);
+			return -EINVAL;
+		}
+	}
+}
+
+static struct file_oper

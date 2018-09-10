@@ -1,0 +1,539 @@
+-- Logs begin at Sat 2018-07-21 14:16:10 SAST, end at Mon 2018-08-06 16:22:57 SAST. --
+Aug 06 14:22:21 rburger kernel: Linux version 4.18.0-rc8-next-20180806 (root@rburger) (gcc version 7.3.0 (GCC)) #1 SMP linux-next-rburger
+Aug 06 14:22:21 rburger kernel: Command line: BOOT_IMAGE=/vmlinuz-4.18-rc8-next-rburger root=/dev/sdb2 ro
+Aug 06 14:22:21 rburger kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Aug 06 14:22:21 rburger kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Aug 06 14:22:21 rburger kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Aug 06 14:22:21 rburger kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Aug 06 14:22:21 rburger kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Aug 06 14:22:21 rburger kernel: BIOS-provided physical RAM map:
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000bb7effff] usable
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x00000000bb7f0000-0x00000000bb7fffff] ACPI data
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Aug 06 14:22:21 rburger kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Aug 06 14:22:21 rburger kernel: NX (Execute Disable) protection: active
+Aug 06 14:22:21 rburger kernel: SMBIOS 2.5 present.
+Aug 06 14:22:21 rburger kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Aug 06 14:22:21 rburger kernel: tsc: Fast TSC calibration using PIT
+Aug 06 14:22:21 rburger kernel: tsc: Detected 2793.646 MHz processor
+Aug 06 14:22:21 rburger kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Aug 06 14:22:21 rburger kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Aug 06 14:22:21 rburger kernel: last_pfn = 0xbb7f0 max_arch_pfn = 0x400000000
+Aug 06 14:22:21 rburger kernel: MTRR default type: uncachable
+Aug 06 14:22:21 rburger kernel: MTRR variable ranges disabled:
+Aug 06 14:22:21 rburger kernel: Disabled
+Aug 06 14:22:21 rburger kernel: x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Aug 06 14:22:21 rburger kernel: CPU MTRRs all blank - virtualized system.
+Aug 06 14:22:21 rburger kernel: x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Aug 06 14:22:21 rburger kernel: found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [(____ptrval____)]
+Aug 06 14:22:21 rburger kernel: Scanning 1 areas for low memory corruption
+Aug 06 14:22:21 rburger kernel: Base memory trampoline at [(____ptrval____)] 99000 size 24576
+Aug 06 14:22:21 rburger kernel: BRK [0x3a712000, 0x3a712fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: BRK [0x3a713000, 0x3a713fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: BRK [0x3a714000, 0x3a714fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: BRK [0x3a715000, 0x3a715fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: BRK [0x3a716000, 0x3a716fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: BRK [0x3a717000, 0x3a717fff] PGTABLE
+Aug 06 14:22:21 rburger kernel: ACPI: Early table checksum verification disabled
+Aug 06 14:22:21 rburger kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Aug 06 14:22:21 rburger kernel: ACPI: XSDT 0x00000000BB7F0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Aug 06 14:22:21 rburger kernel: ACPI: FACP 0x00000000BB7F00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Aug 06 14:22:21 rburger kernel: ACPI: DSDT 0x00000000BB7F0470 0021FF (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Aug 06 14:22:21 rburger kernel: ACPI: FACS 0x00000000BB7F0200 000040
+Aug 06 14:22:21 rburger kernel: ACPI: FACS 0x00000000BB7F0200 000040
+Aug 06 14:22:21 rburger kernel: ACPI: APIC 0x00000000BB7F0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Aug 06 14:22:21 rburger kernel: ACPI: SSDT 0x00000000BB7F02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Aug 06 14:22:21 rburger kernel: ACPI: Local APIC address 0xfee00000
+Aug 06 14:22:21 rburger kernel: No NUMA configuration found
+Aug 06 14:22:21 rburger kernel: Faking a node at [mem 0x0000000000000000-0x00000000bb7effff]
+Aug 06 14:22:21 rburger kernel: NODE_DATA(0) allocated [mem 0xbb7ec000-0xbb7effff]
+Aug 06 14:22:21 rburger kernel: Zone ranges:
+Aug 06 14:22:21 rburger kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Aug 06 14:22:21 rburger kernel:   DMA32    [mem 0x0000000001000000-0x00000000bb7effff]
+Aug 06 14:22:21 rburger kernel:   Normal   empty
+Aug 06 14:22:21 rburger kernel: Movable zone start for each node
+Aug 06 14:22:21 rburger kernel: Early memory node ranges
+Aug 06 14:22:21 rburger kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Aug 06 14:22:21 rburger kernel:   node   0: [mem 0x0000000000100000-0x00000000bb7effff]
+Aug 06 14:22:21 rburger kernel: Reserved but unavailable: 18546 pages
+Aug 06 14:22:21 rburger kernel: Initmem setup node 0 [mem 0x0000000000001000-0x00000000bb7effff]
+Aug 06 14:22:21 rburger kernel: On node 0 totalpages: 767886
+Aug 06 14:22:21 rburger kernel:   DMA zone: 64 pages used for memmap
+Aug 06 14:22:21 rburger kernel:   DMA zone: 21 pages reserved
+Aug 06 14:22:21 rburger kernel:   DMA zone: 3998 pages, LIFO batch:0
+Aug 06 14:22:21 rburger kernel:   DMA32 zone: 11936 pages used for memmap
+Aug 06 14:22:21 rburger kernel:   DMA32 zone: 763888 pages, LIFO batch:63
+Aug 06 14:22:21 rburger kernel: ACPI: PM-Timer IO Port: 0x4008
+Aug 06 14:22:21 rburger kernel: ACPI: Local APIC address 0xfee00000
+Aug 06 14:22:21 rburger kernel: IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Aug 06 14:22:21 rburger kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Aug 06 14:22:21 rburger kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Aug 06 14:22:21 rburger kernel: ACPI: IRQ0 used by override.
+Aug 06 14:22:21 rburger kernel: ACPI: IRQ9 used by override.
+Aug 06 14:22:21 rburger kernel: Using ACPI (MADT) for SMP configuration information
+Aug 06 14:22:21 rburger kernel: smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+Aug 06 14:22:21 rburger kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Aug 06 14:22:21 rburger kernel: PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Aug 06 14:22:21 rburger kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Aug 06 14:22:21 rburger kernel: PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Aug 06 14:22:21 rburger kernel: [mem 0xbb800000-0xfebfffff] available for PCI devices
+Aug 06 14:22:21 rburger kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Aug 06 14:22:21 rburger kernel: random: get_random_bytes called from start_kernel+0x8b/0x4a4 with crng_init=0
+Aug 06 14:22:21 rburger kernel: setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:1 nr_node_ids:1
+Aug 06 14:22:21 rburger kernel: percpu: Embedded 43 pages/cpu @(____ptrval____) s138008 r8192 d29928 u2097152
+Aug 06 14:22:21 rburger kernel: pcpu-alloc: s138008 r8192 d29928 u2097152 alloc=1*2097152
+Aug 06 14:22:21 rburger kernel: pcpu-alloc: [0] 0 
+Aug 06 14:22:21 rburger kernel: Built 1 zonelists, mobility grouping on.  Total pages: 755865
+Aug 06 14:22:21 rburger kernel: Policy zone: DMA32
+Aug 06 14:22:21 rburger kernel: Kernel command line: BOOT_IMAGE=/vmlinuz-4.18-rc8-next-rburger root=/dev/sdb2 ro
+Aug 06 14:22:21 rburger kernel: Calgary: detecting Calgary via BIOS EBDA area
+Aug 06 14:22:21 rburger kernel: Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Aug 06 14:22:21 rburger kernel: Memory: 2996340K/3071544K available (12300K kernel code, 1303K rwdata, 3028K rodata, 1236K init, 608K bss, 75204K reserved, 0K cma-reserved)
+Aug 06 14:22:21 rburger kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Aug 06 14:22:21 rburger kernel: Kernel/User page tables isolation: enabled
+Aug 06 14:22:21 rburger kernel: rcu: Hierarchical RCU implementation.
+Aug 06 14:22:21 rburger kernel: rcu:         RCU event tracing is enabled.
+Aug 06 14:22:21 rburger kernel: rcu:         RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
+Aug 06 14:22:21 rburger kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+Aug 06 14:22:21 rburger kernel: NR_IRQS: 4352, nr_irqs: 256, preallocated irqs: 16
+Aug 06 14:22:21 rburger kernel: Console: colour VGA+ 80x25
+Aug 06 14:22:21 rburger kernel: console [tty0] enabled
+Aug 06 14:22:21 rburger kernel: ACPI: Core revision 20180629
+Aug 06 14:22:21 rburger kernel: APIC: Switch to symmetric I/O mode setup
+Aug 06 14:22:21 rburger kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Aug 06 14:22:21 rburger kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2844ce349f9, max_idle_ns: 440795203612 ns
+Aug 06 14:22:21 rburger kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 5587.29 BogoMIPS (lpj=2793646)
+Aug 06 14:22:21 rburger kernel: pid_max: default: 32768 minimum: 301
+Aug 06 14:22:21 rburger kernel: Security Framework initialized
+Aug 06 14:22:21 rburger kernel: SELinux:  Initializing.
+Aug 06 14:22:21 rburger kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+Aug 06 14:22:21 rburger kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Aug 06 14:22:21 rburger kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+Aug 06 14:22:21 rburger kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+Aug 06 14:22:21 rburger kernel: CPU: Physical Processor ID: 0
+Aug 06 14:22:21 rburger kernel: mce: CPU supports 0 MCE banks
+Aug 06 14:22:21 rburger kernel: process: using mwait in idle threads
+Aug 06 14:22:21 rburger kernel: Last level iTLB entries: 4KB 128, 2MB 8, 4MB 8
+Aug 06 14:22:21 rburger kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Aug 06 14:22:21 rburger kernel: Spectre V2 : Mitigation: Full generic retpoline
+Aug 06 14:22:21 rburger kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Aug 06 14:22:21 rburger kernel: Speculative Store Bypass: Vulnerable
+Aug 06 14:22:21 rburger kernel: Freeing SMP alternatives memory: 40K
+Aug 06 14:22:21 rburger kernel: smpboot: CPU0: Intel(R) Core(TM) i5-5575R CPU @ 2.80GHz (family: 0x6, model: 0x47, stepping: 0x1)
+Aug 06 14:22:21 rburger kernel: Performance Events: unsupported p6 CPU model 71 no PMU driver, software events only.
+Aug 06 14:22:21 rburger kernel: rcu: Hierarchical SRCU implementation.
+Aug 06 14:22:21 rburger kernel: smp: Bringing up secondary CPUs ...
+Aug 06 14:22:21 rburger kernel: smp: Brought up 1 node, 1 CPU
+Aug 06 14:22:21 rburger kernel: smpboot: Max logical packages: 1
+Aug 06 14:22:21 rburger kernel: smpboot: Total of 1 processors activated (5587.29 BogoMIPS)
+Aug 06 14:22:21 rburger kernel: devtmpfs: initialized
+Aug 06 14:22:21 rburger kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Aug 06 14:22:21 rburger kernel: futex hash table entries: 256 (order: 2, 16384 bytes)
+Aug 06 14:22:21 rburger kernel: kworker/u2:0 (17) used greatest stack depth: 14592 bytes left
+Aug 06 14:22:21 rburger kernel: RTC time: 14:22:16, date: 08/06/18
+Aug 06 14:22:21 rburger kernel: NET: Registered protocol family 16
+Aug 06 14:22:21 rburger kernel: audit: initializing netlink subsys (disabled)
+Aug 06 14:22:21 rburger kernel: cpuidle: using governor menu
+Aug 06 14:22:21 rburger kernel: ACPI: bus type PCI registered
+Aug 06 14:22:21 rburger kernel: PCI: Using configuration type 1 for base access
+Aug 06 14:22:21 rburger kernel: audit: type=2000 audit(1533565336.036:1): state=initialized audit_enabled=0 res=1
+Aug 06 14:22:21 rburger kernel: kworker/u2:1 (24) used greatest stack depth: 14144 bytes left
+Aug 06 14:22:21 rburger kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(Module Device)
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(Processor Device)
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(Linux-Dell-Video)
+Aug 06 14:22:21 rburger kernel: ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Aug 06 14:22:21 rburger kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Aug 06 14:22:21 rburger kernel: ACPI: Interpreter enabled
+Aug 06 14:22:21 rburger kernel: ACPI: (supports S0 S5)
+Aug 06 14:22:21 rburger kernel: ACPI: Using IOAPIC for interrupt routing
+Aug 06 14:22:21 rburger kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Aug 06 14:22:21 rburger kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+Aug 06 14:22:21 rburger kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Aug 06 14:22:21 rburger kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Aug 06 14:22:21 rburger kernel: acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Aug 06 14:22:21 rburger kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Aug 06 14:22:21 rburger kernel: PCI host bridge to bus 0000:00
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: root bus resource [mem 0xbb800000-0xfdffffff window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Aug 06 14:22:21 rburger kernel: pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:03.0: reg 0x18: [io  0xd010-0xd017]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Aug 06 14:22:21 rburger kernel: pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Aug 06 14:22:21 rburger kernel: pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Aug 06 14:22:21 rburger kernel: pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Aug 06 14:22:21 rburger kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Aug 06 14:22:21 rburger kernel: pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Aug 06 14:22:21 rburger kernel: pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Aug 06 14:22:21 rburger kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Aug 06 14:22:21 rburger kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+Aug 06 14:22:21 rburger kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+Aug 06 14:22:21 rburger kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+Aug 06 14:22:21 rburger kernel: vgaarb: loaded
+Aug 06 14:22:21 rburger kernel: SCSI subsystem initialized
+Aug 06 14:22:21 rburger kernel: libata version 3.00 loaded.
+Aug 06 14:22:21 rburger kernel: ACPI: bus type USB registered
+Aug 06 14:22:21 rburger kernel: usbcore: registered new interface driver usbfs
+Aug 06 14:22:21 rburger kernel: usbcore: registered new interface driver hub
+Aug 06 14:22:21 rburger kernel: usbcore: registered new device driver usb
+Aug 06 14:22:21 rburger kernel: pps_core: LinuxPPS API ver. 1 registered
+Aug 06 14:22:21 rburger kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Aug 06 14:22:21 rburger kernel: PTP clock support registered
+Aug 06 14:22:21 rburger kernel: EDAC MC: Ver: 3.0.0
+Aug 06 14:22:21 rburger kernel: Advanced Linux Sound Architecture Driver Initialized.
+Aug 06 14:22:21 rburger kernel: PCI: Using ACPI for IRQ routing
+Aug 06 14:22:21 rburger kernel: PCI: pci_cache_line_size set to 64 bytes
+Aug 06 14:22:21 rburger kernel: e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Aug 06 14:22:21 rburger kernel: e820: reserve RAM buffer [mem 0xbb7f0000-0xbbffffff]
+Aug 06 14:22:21 rburger kernel: NetLabel: Initializing
+Aug 06 14:22:21 rburger kernel: NetLabel:  domain hash size = 128
+Aug 06 14:22:21 rburger kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Aug 06 14:22:21 rburger kernel: NetLabel:  unlabeled traffic allowed by default
+Aug 06 14:22:21 rburger kernel: clocksource: Switched to clocksource tsc-early
+Aug 06 14:22:21 rburger kernel: VFS: Disk quotas dquot_6.6.0
+Aug 06 14:22:21 rburger kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Aug 06 14:22:21 rburger kernel: pnp: PnP ACPI init
+Aug 06 14:22:21 rburger kernel: pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Aug 06 14:22:21 rburger kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Aug 06 14:22:21 rburger kernel: pnp: PnP ACPI: found 2 devices
+Aug 06 14:22:21 rburger kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Aug 06 14:22:21 rburger kernel: pci_bus 0000:00: resource 7 [mem 0xbb800000-0xfdffffff window]
+Aug 06 14:22:21 rburger kernel: NET: Registered protocol family 2
+Aug 06 14:22:21 rburger kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+Aug 06 14:22:21 rburger kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+Aug 06 14:22:21 rburger kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+Aug 06 14:22:21 rburger kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Aug 06 14:22:21 rburger kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes)
+Aug 06 14:22:21 rburger kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+Aug 06 14:22:21 rburger kernel: NET: Registered protocol family 1
+Aug 06 14:22:21 rburger kernel: RPC: Registered named UNIX socket transport module.
+Aug 06 14:22:21 rburger kernel: RPC: Registered udp transport module.
+Aug 06 14:22:21 rburger kernel: RPC: Registered tcp transport module.
+Aug 06 14:22:21 rburger kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Aug 06 14:22:21 rburger kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Aug 06 14:22:21 rburger kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Aug 06 14:22:21 rburger kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Aug 06 14:22:21 rburger kernel: PCI: CLS 0 bytes, default 64
+Aug 06 14:22:21 rburger kernel: RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 10737418240 ms ovfl timer
+Aug 06 14:22:21 rburger kernel: RAPL PMU: hw unit of domain pp0-core 2^-0 Joules
+Aug 06 14:22:21 rburger kernel: RAPL PMU: hw unit of domain package 2^-0 Joules
+Aug 06 14:22:21 rburger kernel: RAPL PMU: hw unit of domain dram 2^-0 Joules
+Aug 06 14:22:21 rburger kernel: RAPL PMU: hw unit of domain pp1-gpu 2^-0 Joules
+Aug 06 14:22:21 rburger kernel: platform rtc_cmos: registered platform RTC device (no PNP device found)
+Aug 06 14:22:21 rburger kernel: Scanning for low memory corruption every 60 seconds
+Aug 06 14:22:21 rburger kernel: Initialise system trusted keyrings
+Aug 06 14:22:21 rburger kernel: workingset: timestamp_bits=57 max_order=20 bucket_order=0
+Aug 06 14:22:21 rburger kernel: NFS: Registering the id_resolver key type
+Aug 06 14:22:21 rburger kernel: Key type id_resolver registered
+Aug 06 14:22:21 rburger kernel: Key type id_legacy registered
+Aug 06 14:22:21 rburger kernel: Key type asymmetric registered
+Aug 06 14:22:21 rburger kernel: Asymmetric key parser 'x509' registered
+Aug 06 14:22:21 rburger kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Aug 06 14:22:21 rburger kernel: io scheduler noop registered
+Aug 06 14:22:21 rburger kernel: io scheduler deadline registered
+Aug 06 14:22:21 rburger kernel: io scheduler cfq registered (default)
+Aug 06 14:22:21 rburger kernel: io scheduler mq-deadline registered
+Aug 06 14:22:21 rburger kernel: io scheduler kyber registered
+Aug 06 14:22:21 rburger kernel: ACPI: AC Adapter [AC] (on-line)
+Aug 06 14:22:21 rburger kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Aug 06 14:22:21 rburger kernel: ACPI: Power Button [PWRF]
+Aug 06 14:22:21 rburger kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Aug 06 14:22:21 rburger kernel: ACPI: Sleep Button [SLPF]
+Aug 06 14:22:21 rburger kernel: ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Aug 06 14:22:21 rburger kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Aug 06 14:22:21 rburger kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Aug 06 14:22:21 rburger kernel: Non-volatile memory driver v1.3
+Aug 06 14:22:21 rburger kernel: Linux agpgart interface v0.103
+Aug 06 14:22:21 rburger kernel: loop: module loaded
+Aug 06 14:22:21 rburger kernel: ahci 0000:00:0d.0: version 3.0
+Aug 06 14:22:21 rburger kernel: ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Aug 06 14:22:21 rburger kernel: ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 2 ports 3 Gbps 0x3 impl SATA mode
+Aug 06 14:22:21 rburger kernel: ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Aug 06 14:22:21 rburger kernel: scsi host0: ahci
+Aug 06 14:22:21 rburger kernel: scsi host1: ahci
+Aug 06 14:22:21 rburger kernel: ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Aug 06 14:22:21 rburger kernel: ata2: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806180 irq 21
+Aug 06 14:22:21 rburger kernel: ata_piix 0000:00:01.1: version 2.13
+Aug 06 14:22:21 rburger kernel: scsi host2: ata_piix
+Aug 06 14:22:21 rburger kernel: scsi host3: ata_piix
+Aug 06 14:22:21 rburger kernel: ata3: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Aug 06 14:22:21 rburger kernel: ata4: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Aug 06 14:22:21 rburger kernel: e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+Aug 06 14:22:21 rburger kernel: e100: Copyright(c) 1999-2006 Intel Corporation
+Aug 06 14:22:21 rburger kernel: e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Aug 06 14:22:21 rburger kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+Aug 06 14:22:21 rburger kernel: ata4.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Aug 06 14:22:21 rburger kernel: ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Aug 06 14:22:21 rburger kernel: ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Aug 06 14:22:21 rburger kernel: ata1.00: 104857600 sectors, multi 128: LBA48 NCQ (depth 32)
+Aug 06 14:22:21 rburger kernel: ata1.00: configured for UDMA/133
+Aug 06 14:22:21 rburger kernel: scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: [sda] 104857600 512-byte logical blocks: (53.7 GB/50.0 GiB)
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: [sda] Write Protect is off
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Aug 06 14:22:21 rburger kernel:  sda: sda1 sda2 < sda5 >
+Aug 06 14:22:21 rburger kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Aug 06 14:22:21 rburger kernel: e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:14:dc:5e
+Aug 06 14:22:21 rburger kernel: e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Aug 06 14:22:21 rburger kernel: e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+Aug 06 14:22:21 rburger kernel: e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Aug 06 14:22:21 rburger kernel: sky2: driver version 1.30
+Aug 06 14:22:21 rburger kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Aug 06 14:22:21 rburger kernel: ehci-pci: EHCI PCI platform driver
+Aug 06 14:22:21 rburger kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Aug 06 14:22:21 rburger kernel: ohci-pci: OHCI PCI platform driver
+Aug 06 14:22:21 rburger kernel: ohci-pci 0000:00:06.0: OHCI PCI host controller
+Aug 06 14:22:21 rburger kernel: ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Aug 06 14:22:21 rburger kernel: ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Aug 06 14:22:21 rburger kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 4.18
+Aug 06 14:22:21 rburger kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Aug 06 14:22:21 rburger kernel: usb usb1: Product: OHCI PCI host controller
+Aug 06 14:22:21 rburger kernel: usb usb1: Manufacturer: Linux 4.18.0-rc8-next-20180806 ohci_hcd
+Aug 06 14:22:21 rburger kernel: usb usb1: SerialNumber: 0000:00:06.0
+Aug 06 14:22:21 rburger kernel: hub 1-0:1.0: USB hub found
+Aug 06 14:22:21 rburger kernel: hub 1-0:1.0: 12 ports detected
+Aug 06 14:22:21 rburger kernel: uhci_hcd: USB Universal Host Controller Interface driver
+Aug 06 14:22:21 rburger kernel: usbcore: registered new interface driver usblp
+Aug 06 14:22:21 rburger kernel: usbcore: registered new interface driver usb-storage
+Aug 06 14:22:21 rburger kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Aug 06 14:22:21 rburger kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Aug 06 14:22:21 rburger kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Aug 06 14:22:21 rburger kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+Aug 06 14:22:21 rburger kernel: rtc_cmos rtc_cmos: registered as rtc0
+Aug 06 14:22:21 rburger kernel: rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Aug 06 14:22:21 rburger kernel: device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+Aug 06 14:22:21 rburger kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Aug 06 14:22:21 rburger kernel: usbcore: registered new interface driver usbhid
+Aug 06 14:22:21 rburger kernel: usbhid: USB HID core driver
+Aug 06 14:22:21 rburger kernel: Initializing XFRM netlink socket
+Aug 06 14:22:21 rburger kernel: NET: Registered protocol family 10
+Aug 06 14:22:21 rburger kernel: Segment Routing with IPv6
+Aug 06 14:22:21 rburger kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Aug 06 14:22:21 rburger kernel: NET: Registered protocol family 17
+Aug 06 14:22:21 rburger kernel: Key type dns_resolver registered
+Aug 06 14:22:21 rburger kernel: sched_clock: Marking stable (764505764, 42856216)->(910001801, -102639821)
+Aug 06 14:22:21 rburger kernel: registered taskstats version 1
+Aug 06 14:22:21 rburger kernel: Loading compiled-in X.509 certificates
+Aug 06 14:22:21 rburger kernel:   Magic number: 14:768:383
+Aug 06 14:22:21 rburger kernel: usb usb1: hash matches
+Aug 06 14:22:21 rburger kernel: console [netcon0] enabled
+Aug 06 14:22:21 rburger kernel: netconsole: network logging started
+Aug 06 14:22:21 rburger kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Aug 06 14:22:21 rburger kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Aug 06 14:22:21 rburger kernel: platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Aug 06 14:22:21 rburger kernel: cfg80211: failed to load regulatory.db
+Aug 06 14:22:21 rburger kernel: ALSA device list:
+Aug 06 14:22:21 rburger kernel:   No soundcards found.
+Aug 06 14:22:21 rburger kernel: ata2: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Aug 06 14:22:21 rburger kernel: ata2.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Aug 06 14:22:21 rburger kernel: ata2.00: 62914560 sectors, multi 128: LBA48 NCQ (depth 32)
+Aug 06 14:22:21 rburger kernel: ata2.00: configured for UDMA/133
+Aug 06 14:22:21 rburger kernel: scsi 1:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: [sdb] Write Protect is off
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: [sdb] Mode Sense: 00 3a 00 00
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: Attached scsi generic sg1 type 0
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Aug 06 14:22:21 rburger kernel: scsi 3:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Aug 06 14:22:21 rburger kernel: random: fast init done
+Aug 06 14:22:21 rburger kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Aug 06 14:22:21 rburger kernel: sr 3:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Aug 06 14:22:21 rburger kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Aug 06 14:22:21 rburger kernel: sr 3:0:0:0: Attached scsi CD-ROM sr0
+Aug 06 14:22:21 rburger kernel: sr 3:0:0:0: Attached scsi generic sg2 type 5
+Aug 06 14:22:21 rburger kernel:  sdb: sdb1 sdb2 sdb3 sdb4
+Aug 06 14:22:21 rburger kernel: sd 1:0:0:0: [sdb] Attached SCSI disk
+Aug 06 14:22:21 rburger kernel: md: Waiting for all devices to be available before autodetect
+Aug 06 14:22:21 rburger kernel: md: If you don't use raid, use raid=noautodetect
+Aug 06 14:22:21 rburger kernel: md: Autodetecting RAID arrays.
+Aug 06 14:22:21 rburger kernel: md: autorun ...
+Aug 06 14:22:21 rburger kernel: md: ... autorun DONE.
+Aug 06 14:22:21 rburger kernel: EXT4-fs (sdb2): mounted filesystem with ordered data mode. Opts: (null)
+Aug 06 14:22:21 rburger kernel: VFS: Mounted root (ext4 filesystem) readonly on device 8:18.
+Aug 06 14:22:21 rburger kernel: devtmpfs: mounted
+Aug 06 14:22:21 rburger kernel: Freeing unused kernel memory: 1236K
+Aug 06 14:22:21 rburger kernel: Write protecting the kernel read-only data: 18432k
+Aug 06 14:22:21 rburger kernel: Freeing unused kernel memory: 2004K
+Aug 06 14:22:21 rburger kernel: Freeing unused kernel memory: 1068K
+Aug 06 14:22:21 rburger kernel: Run /sbin/init as init process
+Aug 06 14:22:21 rburger kernel: usb 1-1: new full-speed USB device number 2 using ohci-pci
+Aug 06 14:22:21 rburger kernel: tsc: Refined TSC clocksource calibration: 2793.534 MHz
+Aug 06 14:22:21 rburger kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x28446481b12, max_idle_ns: 440795279392 ns
+Aug 06 14:22:21 rburger kernel: clocksource: Switched to clocksource tsc
+Aug 06 14:22:21 rburger kernel: usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Aug 06 14:22:21 rburger kernel: usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Aug 06 14:22:21 rburger kernel: usb 1-1: Product: USB Tablet
+Aug 06 14:22:21 rburger kernel: usb 1-1: Manufacturer: VirtualBox
+Aug 06 14:22:21 rburger kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Aug 06 14:22:21 rburger kernel: hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Aug 06 14:22:21 rburger systemd[1]: RTC configured in localtime, applying delta of 120 minutes to system time.
+Aug 06 14:22:21 rburger systemd[1]: systemd 237 running in system mode. (-PAM -AUDIT -SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN2 -IDN -PCRE2 default-hierarchy=hybrid)
+Aug 06 14:22:21 rburger systemd[1]: Detected virtualization oracle.
+Aug 06 14:22:21 rburger systemd[1]: Detected architecture x86-64.
+Aug 06 14:22:21 rburger systemd[1]: Set hostname to <rburger>.
+Aug 06 14:22:21 rburger kernel: systemd-getty-g (1049) used greatest stack depth: 13840 bytes left
+Aug 06 14:22:21 rburger kernel: systemd-sysv-ge (1054) used greatest stack depth: 13824 bytes left
+Aug 06 14:22:21 rburger systemd[1]: File /lib/systemd/system/systemd-journald.service:35 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+Aug 06 14:22:21 rburger systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+Aug 06 14:22:21 rburger kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Aug 06 14:22:21 rburger systemd[1]: Created slice System Slice.
+Aug 06 14:22:21 rburger kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Aug 06 14:22:21 rburger systemd[1]: Created slice system-getty.slice.
+Aug 06 14:22:21 rburger kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Aug 06 14:22:21 rburger systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Aug 06 14:22:21 rburger systemd[1]: Listening on Journal Audit Socket.
+Aug 06 14:22:21 rburger systemd-journald[1061]: Journal started
+Aug 06 14:22:21 rburger systemd-journald[1061]: Runtime journal (/run/log/journal/022ae55ac65e47f5b54f263aed2937ef) is 8.0M, max 146.5M, 138.5M free.
+Aug 06 14:22:21 rburger systemd-fsck[1057]: /dev/sdb2: clean, 313274/1222992 files, 2810686/4882432 blocks
+Aug 06 14:22:21 rburger systemd[1]: Started File System Check on Root Device.
+Aug 06 14:22:21 rburger systemd[1]: Starting Remount Root and Kernel File Systems...
+Aug 06 14:22:21 rburger systemd-sysctl[1062]: Couldn't write 'fq_codel' to 'net/core/default_qdisc', ignoring: No such file or directory
+Aug 06 14:22:21 rburger systemd[1]: Started Apply Kernel Variables.
+Aug 06 14:22:21 rburger kernel: EXT4-fs (sdb2): re-mounted. Opts: (null)
+Aug 06 14:22:21 rburger systemd[1]: Started Remount Root and Kernel File Systems.
+Aug 06 14:22:21 rburger systemd[1]: Starting Load/Save Random Seed...
+Aug 06 14:22:21 rburger systemd[1]: Starting Flush Journal to Persistent Storage...
+Aug 06 14:22:22 rburger systemd-journald[1061]: Time spent on flushing to /var is 5.598ms for 434 entries.
+Aug 06 14:22:22 rburger systemd-journald[1061]: System journal (/var/log/journal/022ae55ac65e47f5b54f263aed2937ef) is 552.1M, max 1.8G, 1.2G free.
+Aug 06 14:22:28 rburger kernel: systemd-tmpfile (1060) used greatest stack depth: 13800 bytes left
+Aug 06 14:22:28 rburger kernel: journal-offline (1579) used greatest stack depth: 13752 bytes left
+Aug 06 14:22:28 rburger kernel: cdrom_id (1592) used greatest stack depth: 13744 bytes left
+Aug 06 14:22:28 rburger kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+Aug 06 14:22:28 rburger kernel: IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+Aug 06 14:22:28 rburger kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Aug 06 14:22:28 rburger kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Aug 06 14:22:28 rburger kernel: Adding 5859368k swap on /dev/sdb3.  Priority:1 extents:1 across:5859368k 
+Aug 06 14:22:28 rburger kernel: EXT4-fs (sdb1): mounting ext2 file system using the ext4 subsystem
+Aug 06 14:22:28 rburger kernel: EXT4-fs (sdb1): warning: mounting unchecked fs, running e2fsck is recommended
+Aug 06 14:22:28 rburger kernel: EXT4-fs (sdb1): mounted filesystem without journal. Opts: (null)
+Aug 06 14:22:28 rburger kernel: gzip (1602) used greatest stack depth: 13440 bytes left
+Aug 06 14:22:28 rburger kernel: hrtimer: interrupt took 5561804 ns
+Aug 06 14:22:28 rburger kernel: systemd-udevd (1591) used greatest stack depth: 13424 bytes left
+Aug 06 14:22:22 rburger systemd[1]: Started Load/Save Random Seed.
+Aug 06 14:22:22 rburger systemd[1]: Started Create Static Device Nodes in /dev.
+Aug 06 14:22:22 rburger systemd[1]: Starting udev Kernel Device Manager...
+Aug 06 14:22:22 rburger systemd[1]: Reached target Local File Systems (Pre).
+Aug 06 14:22:22 rburger systemd[1]: Reached target Containers.
+Aug 06 14:22:23 rburger systemd[1]: Started udev Kernel Device Manager.
+Aug 06 14:22:23 rburger systemd[1]: Starting Network Service...
+Aug 06 14:22:24 rburger systemd-networkd[1581]: Enumeration completed
+Aug 06 14:22:24 rburger systemd[1]: Started Network Service.
+Aug 06 14:22:24 rburger systemd-udevd[1590]: link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+Aug 06 14:22:24 rburger systemd-udevd[1589]: link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+Aug 06 14:22:24 rburger systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Aug 06 14:22:24 rburger systemd-udevd[1591]: link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+Aug 06 14:22:24 rburger systemd-networkd[1581]: eth0: Interface name change detected, eth0 has been renamed to enp0s3.
+Aug 06 14:22:24 rburger systemd[1]: Found device 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+Aug 06 14:22:24 rburger systemd-networkd[1581]: sit0: Link is not managed by us
+Aug 06 14:22:24 rburger systemd-networkd[1581]: lo: Link is not managed by us
+Aug 06 14:22:24 rburger systemd-networkd[1581]: enp0s3: IPv6 successfully enabled
+Aug 06 14:22:24 rburger systemd-networkd[1581]: enp0s3: Gained carrier
+Aug 06 14:22:24 rburger systemd-networkd[1581]: enp0s3: DHCPv4 address 10.0.2.15/24 via 10.0.2.2
+Aug 06 14:22:25 rburger systemd[1]: Found device VBOX_HARDDISK 3.
+Aug 06 14:22:25 rburger systemd[1]: Activating swap /dev/sdb3...
+Aug 06 14:22:25 rburger systemd[1]: Activated swap /dev/sdb3.
+Aug 06 14:22:25 rburger systemd[1]: Reached target Swap.
+Aug 06 14:22:25 rburger systemd[1]: Found device VBOX_HARDDISK 1.
+Aug 06 14:22:26 rburger systemd-networkd[1581]: enp0s3: Gained IPv6LL
+Aug 06 14:22:26 rburger systemd[1]: Mounting /boot...
+Aug 06 14:22:26 rburger systemd[1]: Mounted /boot.
+Aug 06 14:22:26 rburger systemd[1]: Reached target Local File Systems.
+Aug 06 14:22:27 rburger systemd[1]: Started Flush Journal to Persistent Storage.
+Aug 06 14:22:27 rburger systemd[1]: Starting Create Volatile Files and Directories...
+Aug 06 14:22:28 rburger systemd[1]: Started Create Volatile Files and Directories.
+Aug 06 14:22:28 rburger systemd[1]: Starting Network Time Synchronization...
+Aug 06 14:22:28 rburger systemd[1]: Starting Network Name Resolution...
+Aug 06 14:22:28 rburger systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+Aug 06 14:22:28 rburger systemd[1]: Started Update UTMP about System Boot/Shutdown.
+Aug 06 14:22:28 rburger systemd-timesyncd[1613]: System clock time unset or jumped backwards, restoring from recorded timestamp: Mon 2018-08-06 16:22:09 SAST
+Aug 06 16:22:09 rburger systemd-timesyncd[1613]: The system is configured to read the RTC time in the local time zone. This mode can not be fully supported. All system time to RTC updates are disabled.
+Aug 06 16:22:09 rburger systemd-resolved[1614]: Positive Trust Anchors:
+Aug 06 16:22:09 rburger systemd-resolved[1614]: . IN DS 19036 8 2 49aac11d7b6f6446702e54a1607371607a1a41855200fd2ce1cdde32f24e8fb5
+Aug 06 16:22:09 rburger systemd-resolved[1614]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+Aug 06 16:22:09 rburger systemd-resolved[1614]: Negative trust anchors: 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+Aug 06 16:22:09 rburger systemd[1]: Started Network Time Synchronization.
+Aug 06 16:22:09 rburger systemd[1]: Reached target System Initialization.
+Aug 06 16:22:09 rburger systemd-resolved[1614]: Using system hostname 'rburger'.
+Aug 06 16:22:09 rburger systemd[1]: Listening on D-Bus System Message Bus Socket.
+Aug 06 16:22:09 rburger systemd[1]: Reached target Sockets.
+Aug 06 16:22:09 rburger systemd[1]: Started Daily Cleanup of Temporary Directories.
+Aug 06 16:22:09 rburger systemd[1]: Reached target Timers.
+Aug 06 16:22:09 rburger systemd[1]: Reached target Basic System.
+Aug 06 16:22:09 rburger systemd[1]: System is tainted: local-hwclock
+Aug 06 16:22:09 rburger systemd[1]: Starting dhcpcd on enp0s3...
+Aug 06 16:22:09 rburger systemd[1]: Started Getty on tty1.
+Aug 06 16:22:09 rburger systemd[1]: Reached target Login Prompts.
+Aug 06 16:22:09 rburger systemd[1]: Starting Login Service...
+Aug 06 16:22:09 rburger systemd[1]: Started D-Bus System Message Bus.
+Aug 06 16:22:09 rburger systemd-logind[1619]: Watching system buttons on /dev/input/event0 (Power Button)
+Aug 06 16:22:09 rburger systemd-logind[1619]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Aug 06 16:22:09 rburger systemd-logind[1619]: Watching system buttons on /dev/input/event3 (AT Translated Set 2 keyboard)
+Aug 06 16:22:09 rburger systemd-logind[1619]: New seat seat0.
+Aug 06 16:22:10 rburger dhcpcd[1617]: DUID 00:01:00:01:22:f5:bd:11:08:00:27:14:dc:5e
+Aug 06 16:22:10 rburger dhcpcd[1617]: enp0s3: IAID 27:14:dc:5e
+Aug 06 16:22:31 rburger systemd-timesyncd[1613]: Synchronized to time server 216.239.35.0:123 (time1.google.com).
+Aug 06 16:22:31 rburger systemd[1]: Started Login Service.
+Aug 06 16:22:31 rburger systemd[1]: Reached target System Time Synchronized.
+Aug 06 16:22:31 rburger systemd[1]: Started Network Name Resolution.
+Aug 06 16:22:31 rburger systemd[1]: Reached target Host and Network Name Lookups.
+Aug 06 16:22:31 rburger dhcpcd[1617]: enp0s3: rebinding lease of 10.0.2.15
+Aug 06 16:22:31 rburger dhcpcd[1617]: enp0s3: leased 10.0.2.15 for 86400 seconds
+Aug 06 16:22:31 rburger dhcpcd[1617]: enp0s3: adding route to 10.0.2.0/24
+Aug 06 16:22:31 rburger dhcpcd[1617]: enp0s3: adding default route via 10.0.2.2
+Aug 06 16:22:32 rburger dhcpcd[1617]: forked to background, child pid 1670
+Aug 06 16:22:32 rburger kernel: dhcpcd (1617) used greatest stack depth: 12696 bytes left
+Aug 06 16:22:32 rburger systemd[1]: Started dhcpcd on enp0s3.
+Aug 06 16:22:32 rburger systemd[1]: Reached target Multi-User System.
+Aug 06 16:22:32 rburger systemd[1]: Reached target Graphical Interface.
+Aug 06 16:22:32 rburger systemd[1]: Starting Update UTMP about System Runlevel Changes...
+Aug 06 16:22:32 rburger systemd[1]: Reached target Network.
+Aug 06 16:22:32 rburger systemd[1]: Started Update UTMP about System Runlevel Changes.
+Aug 06 16:22:32 rburger systemd[1]: Startup finished in 2.888s (kernel) + 11.070s (userspace) = 13.958s.
+Aug 06 16:22:32 rburger dhcpcd[1670]: enp0s3: soliciting an IPv6 router
+Aug 06 16:22:40 rburger systemd-networkd[1581]: enp0s3: Configured
+Aug 06 16:22:40 rburger systemd-timesyncd[1613]: Network configuration changed, trying to establish connection.
+Aug 06 16:22:40 rburger systemd-timesyncd[1613]: Synchronized to time server 216.239.35.0:123 (time1.google.com).
+Aug 06 16:22:44 rburger dhcpcd[1670]: enp0s3: no IPv6 Routers available
+Aug 06 16:22:50 rburger kernel: random: crng init done
+Aug 06 16:22:50 rburger kernel: random: 7 urandom warning(s) missed due to ratelimiting
+Aug 06 16:22:57 rburger login[1618]: ROOT LOGIN  on '/dev/tty1'

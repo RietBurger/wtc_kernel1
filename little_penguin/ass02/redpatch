@@ -1,0 +1,19 @@
+From: Riette Burger <rburger@student.wethinkcode.co.za>
+To: Phuti Matle <pmatle@student.wethinkcode.co.za>
+Subject: Modification made to Extraversion
+
+Changed name of EXTRAVERSION from rc7 to thor_kernel
+
+Sign-off-by: Riette Burger <rburger@student.wethinkcode.co.za>
+
+--- Makefile.orig	2018-08-29 09:05:50.594634914 +0200
++++ Makefile	2018-08-29 09:10:33.733938071 +0200
+@@ -2,7 +2,7 @@
+ VERSION = 4
+ PATCHLEVEL = 18
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc7
++EXTRAVERSION = -thor_kernel
+ NAME = Merciless Moray
+
+ # *DOCUMENTATION*
